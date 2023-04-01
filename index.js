@@ -30,6 +30,9 @@ const resizeGrid = function(newSize) {
     console.log(newSize)
 }
 
+// Clear all existing childDivs
 const clearGrid = function () {
-
+    divTarget.forEach((item) => {
+        item.remove();
+      });
 }
