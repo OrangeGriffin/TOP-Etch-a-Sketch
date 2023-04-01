@@ -3,6 +3,22 @@
     padding: 0;
 }
 
+body {
+    display: flex;
+    justify-content: center;
+}
 .container {
     display: flex;
+    border: 5px solid rebeccapurple;
+    width: 600px;
+    height: 600px;
+    flex-wrap: wrap;
+}
+
+.child-div {
+    display: flex;
+    flex: 1 1 auto;
+    background-color: gray;
+    height: 37.5px;
+    width: 37.5px;
 }
