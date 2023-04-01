@@ -27,7 +27,30 @@ changeGridSizeBtn.addEventListener('click', () => {
 })
 
 const resizeGrid = function(newSize) {
-    console.log(newSize)
+    //console.log("Size entered: ", newSize);
+    const inputSize = Number(newSize);
+    const iterator = inputSize*inputSize;
+    //console.log("Iterator: ", iterator);
+    const sideLength = ((600/inputSize) - 2) + "px";
+    //console.log("Side length: ", sideLength);
+
+    // Create new childDivs based on given input
+    for (i = 1; i <= iterator; i++) {
+        const container = document.querySelector(".container");
+        const childDiv = document.createElement("div");
+        container.appendChild(childDiv);
+        childDiv.className = "child-div";
+      }
+
+      // Because the original childDivs were removed and new childDivs
+      // were created, need to create a new target
+      const resizedDivTarget = document.querySelectorAll(".child-div");
+      // Give the new childDivs an updated height and width
+      resizedDivTarget.forEach((item) => {
+        item.style.width = sideLength;
+        item.style.height = sideLength;
+        item.style.backgroundColor = "#d5d5d5";
+      });
 }
 
 // Clear all existing childDivs
