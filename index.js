@@ -16,3 +16,20 @@ divTarget.forEach((item) => {
     item.style.backgroundColor = "black";
   });
 });
+
+// Create event listener for resize button
+// Assign the entered value to newSize
+const changeGridSizeBtn = document.querySelector("#change-grid-size")
+changeGridSizeBtn.addEventListener('click', () => {
+    let newSize = prompt("Enter Number up to 100")
+    clearGrid();
+    resizeGrid(newSize)
+})
+
+const resizeGrid = function(newSize) {
+    console.log(newSize)
+}
+
+const clearGrid = function () {
+
+}
