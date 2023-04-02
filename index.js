@@ -13,7 +13,10 @@ const divTarget = document.querySelectorAll(".child-div");
 // Update background-color to given child-div
 divTarget.forEach((item) => {
   item.addEventListener("mouseover", () => {
-    item.style.backgroundColor = "black";
+    // Working for updating color to black
+   // item.style.backgroundColor = "black";
+
+   item.style.backgroundColor = randomRGB();
   });
 });
 
@@ -61,4 +64,14 @@ const clearGrid = function () {
     clearDivTarget.forEach((item) => {
         item.remove();
       });
+}
+
+// Creates randomb values for RGB and returns a string to pass through
+const randomRGB = function () {
+    const randomRed = Math.floor(Math.random() * 256).toString();
+    const randomGreen = Math.floor(Math.random() * 256).toString();
+    const randomBlue = Math.floor(Math.random() * 256).toString();
+
+    const randomColor = "rgb(" + randomRed + "," + randomGreen + "," + randomBlue  + ")";
+    return randomColor;
 }
