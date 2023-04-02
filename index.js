@@ -55,7 +55,10 @@ const resizeGrid = function(newSize) {
 
 // Clear all existing childDivs
 const clearGrid = function () {
-    divTarget.forEach((item) => {
+    // Because the original childDivs were removed and new childDivs
+      // were created, need to create a new target
+    const clearDivTarget = document.querySelectorAll(".child-div");
+    clearDivTarget.forEach((item) => {
         item.remove();
       });
 }
