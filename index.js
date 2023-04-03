@@ -75,3 +75,10 @@ const randomRGB = function () {
     const randomColor = "rgb(" + randomRed + "," + randomGreen + "," + randomBlue  + ")";
     return randomColor;
 }
+
+ // Extra Crdit Part 2
+const percentageScalerTest = function() {
+  for (i=0; i<=100; i+=10) {
+      console.log(i/100);
+  }
+}
